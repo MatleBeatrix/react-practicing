@@ -1,69 +1,43 @@
 import {useState} from 'react';
 
 const App = () => {
-  //let [isLandingPage, setMainDisplay] = useState(true);
   let [isLandingPage, setterF] = useState(true);
+  let [pageName, setPageName] = useState('home');
+
+  //let shouldShowHomepage = pageName === 'about';  //igaz vagy hamis értéket add vissza
   
-  /*
-  const toogleDisplay = () => {
+  const toogleDisplay = (text) => {
     setterF(!isLandingPage);
-    //setMainDisplay((prevState) => !prevState);
+    console.log(text);
   }
-  */
+  
   
   return (
     <div>
       <p>Hello Word</p>
       <div>
-        {/*<Page/>*/}
-        {/*Page()*/}
         {
           isLandingPage ? 
           <div>Landing Page</div> : 
           <div>Homepage</div>
         }
       </div>
-      <br/>
       <button onClick={() => setterF(!isLandingPage)}>Click</button>
-    </div>
-  )
-}
-
-/*
-const Page = () => {
-  if (bool){
-    return <div>Homepage</div>
-  }
-  else {
-    return <div>Landing Page</div>
-  }
-}
-*/
-/*
-const handleClick = () => {
-  console.log(bool + ' volt');
-  bool = !bool;
-  console.log(bool + ' lett');
-}
-
-let bool = false;
-const App = () => {
-  return (
-    <div>
-    <p>Hello Word</p>
-    <div>
-        {
-        bool ? 
-          <div>Homegpage</div> : 
-          <div>Landingpage</div>
-        }
-        {
+      <button onClick={toogleDisplay}>Click</button>
+      <hr/>
+      <button onClick={()=> {setPageName("home")}}>Home</button>
+      <button onClick={()=> {setPageName("about")}}>About</button>
+      <button onClick={()=> {setPageName("landing")}}>Landing</button>
+      <br/><br/>
+      <div className='content'>
+        {pageName === "home" && <div>Content of Homepage<h1>Welcome to the Homepage!</h1></div>}
+        {pageName === "about" && <div>Content of About Page<h2>This page is very cool</h2></div>}
+        {pageName === "landing" && <div>Content of Landing Page <br/><br/><input type="text" placeholder='type'/></div>}
       </div>
-      <br/>
-      <button onClick={handleClick}>Click</button>
+      <hr/>
     </div>
   )
 }
-*/
+
 
 export default App;

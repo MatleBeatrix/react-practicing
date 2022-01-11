@@ -1,3 +1,9 @@
 body {
-  background-color: lightcyan;
+  background-color: silver;
+}
+
+.content {
+  background-color: orange;
+  height: 300px;
+  text-align: center;
 }
