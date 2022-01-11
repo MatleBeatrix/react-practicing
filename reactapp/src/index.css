@@ -1,36 +1,3 @@
 body {
   background-color: lightcyan;
 }
-
-.par {
-  background-color: yellow;
-}
-
-#egyedi {
-  background-color: green;
-}
-
-.carBrand1 {
-  border: 2px solid red;
-  margin: 5px;
-}
-
-.carBrand2 {
-  border: 2px solid blue;
-  margin: 5px;
-}
-
-.carBrand3_5 {
-  border: 2px solid tomato;
-  background-color: tomato;
-  margin: 5px;
-}
-.carBrand3_4 {
-  border: 2px solid purple;
-  margin: 5px;
-}
-
-.carBrandTitle {
-  background-color: black;
-  color: white;
-}
